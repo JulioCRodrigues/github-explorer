@@ -4,13 +4,6 @@ import { RepositoryItem } from '../components/RepositoryItem';
 
 import '../styles/repositories.scss';
 
-// 
-
-const repository = {
-    name: 'bethehero',
-    description: 'Seja um heroi',
-    link: 'https://github.com/JulioCRodrigues/be-the-hero'
-}
 
 export function RepositoryList(){
 
@@ -29,12 +22,11 @@ export function RepositoryList(){
             <h1>Lista de repositórios</h1>
 
             <ul>
-                <RepositoryItem 
-                    repository={repository} />
-                    <RepositoryItem 
-                    repository={repository} />
-                    <RepositoryItem 
-                    repository={repository} />
+                {repositories.map(repository => {
+                    return <RepositoryItem key={repository.name} repository={repository} />
+                })}
+
+                    
             </ul>
 
         </section>
