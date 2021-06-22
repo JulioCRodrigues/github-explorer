@@ -13,7 +13,7 @@ function Increment() {
         <div>
             <h2>{counter}</h2>
             <button type="button" onClick={Increment}>
-                Adicionar
+                ADD +1
             </button>
         </div>
     );
